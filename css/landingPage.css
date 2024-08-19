@@ -1,0 +1,196 @@
+:root {
+  --red: rgb(125, 16, 16);
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: gray url(../Assets/Dogs.webp);
+  background-size: cover;
+  height: 35rem;
+  color: white;
+}
+
+header .backImage {
+  width: 3rem;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 12rem;
+  padding-top: 3rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 2rem 5rem 1.2rem;
+}
+
+header h1 span {
+  text-transform: uppercase;
+  font-size: 3rem;
+  color: var(--red);
+  position: relative;
+  z-index: 1;
+}
+
+header h1 span::before {
+  content: " ";
+  position: absolute;
+  width: 5rem;
+  height: 1rem;
+  background-color: beige;
+  bottom: 0;
+  z-index: -1;
+}
+
+header .headerDescription {
+  font-weight: bold;
+  max-width: 45rem;
+  margin: 0.5rem 3rem;
+  font-size: 1.1rem;
+  color: var(--red);
+}
+
+header .formContainer {
+  background-color: rgb(255, 255, 255, 0.7);
+  font-weight: bold;
+  color: black;
+  padding: 2rem;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem darkred;
+}
+
+header .formContainer label {
+  color: var(--red);
+}
+
+header .formContainer p {
+  color: #888;
+  margin-top: 0;
+  position: relative;
+  left: 1rem;
+  align-self: flex-start;
+}
+
+header .formContainer input[type="text"] {
+  width: 100%;
+  border: 1px solid darkgrey;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+header .formContainer input[type="button"] {
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 1rem 0;
+  background-color: var(--red);
+  width: 30%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+header .formContainer input[type="button"]:hover {
+  background-color: rgb(73, 0, 0);
+}
+
+.callToAction {
+  display: flex;
+  flex-direction: column;
+}
+
+.callToAction .callToActionMessage {
+  padding: 5rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.callToAction .callToActionMessage h2 {
+  text-transform: uppercase;
+  position: relative;
+}
+
+.callToAction .callToActionMessage h2::before {
+  content: " ";
+  position: absolute;
+  width: 9rem;
+  height: 0.5rem;
+  background-color: var(--red);
+  bottom: 0;
+  z-index: -1;
+  left: -2rem;
+}
+
+.callToAction img {
+  border-radius: 5rem;
+  padding: 2rem;
+}
+
+.callToActionForm .formContainer {
+  background-color: rgb(255, 255, 255, 0.7);
+  font-weight: bold;
+  color: black;
+  padding: 2rem;
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem darkred;
+}
+
+.callToActionForm .formContainer label {
+  color: var(--red);
+}
+
+.callToActionForm .formContainer p {
+  color: #888;
+  margin-top: 0;
+  position: relative;
+  left: 1rem;
+  align-self: flex-start;
+}
+
+.callToActionForm .formContainer input[type="text"] {
+  width: 100%;
+  border: 1px solid darkgrey;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.callToActionForm .formContainer input[type="button"] {
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 1rem 0;
+  background-color: var(--red);
+  width: 30%;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.callToActionForm .formContainer input[type="button"]:hover {
+  background-color: rgb(73, 0, 0);
+}

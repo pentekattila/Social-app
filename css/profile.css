@@ -1,0 +1,502 @@
+* {
+  font-family: "Lato", system-ui;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgb(20, 54, 105);
+}
+
+header .mainSearch {
+  display: flex;
+  align-items: center;
+}
+
+header .mainSearch .logo {
+  padding: 1rem;
+  font-size: 1.7rem;
+  color: rgb(179, 156, 23);
+}
+
+header .mainSearch .logo:hover {
+  color: rgb(226, 194, 14);
+}
+
+header .mainSearch .searchInput {
+  height: 1.7rem;
+  border-radius: 1.5rem;
+  padding: 0 1rem;
+  border-color: beige;
+}
+
+header .mainSearch .searchInput:focus {
+  border: 0.25rem solid rgb(54, 66, 104);
+}
+
+header .mainNavigation .navigation,
+header .links {
+  display: flex;
+}
+
+header .mainNavigation .navigation {
+  gap: 4rem;
+}
+
+header .mainNavigation .navigation > li > a {
+  border-radius: 50%;
+  margin: 0 0.35rem;
+  display: flex;
+}
+
+.navIcons {
+  font-size: 1.7rem;
+  color: rgb(179, 156, 23);
+  margin: 0 0.5rem;
+}
+
+.navIcons:hover {
+  color: rgb(245, 215, 47);
+}
+
+.bellIcon {
+  position: relative;
+  display: block;
+}
+
+.bellIcon span {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9rem;
+}
+
+.profile {
+  margin: 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  height: 40rem;
+  width: 100%;
+  /* border-bottom: 1px solid grey; */
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+  background-color: #d9e6fa;
+}
+
+.cover {
+  width: 65%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5rem;
+  position: relative;
+}
+
+.cover .coverPhoto {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.cover .profileImage {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  bottom: -8rem;
+  left: 2rem;
+  border: 4px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.cover .profileImage:hover {
+  opacity: 0.9;
+}
+
+.cover .editCoverIcon {
+  position: absolute;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(214, 214, 214);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -8rem;
+  left: 9rem;
+  cursor: pointer;
+}
+
+.cover .editCoverIcon:hover {
+  opacity: 0.9;
+}
+
+.cover .editCover {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 10rem;
+  height: 2.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.cover .editCover:hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.profileDetails {
+  width: 60%;
+  display: flex;
+  padding-bottom: 1rem;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  border-bottom: 1px solid rgb(20, 54, 105);
+}
+
+.profileDetails .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 82%;
+  height: 4rem;
+}
+
+.profileDetails .details h1 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: start;
+  padding: 0;
+  color: rgb(20, 54, 105);
+}
+
+.profile .detailsButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+  width: 75%;
+}
+
+.profile .details h3 {
+  margin-top: 0;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: rgb(109, 109, 109);
+}
+
+.profile .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
+
+.profile .buttons .detailButton {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.profile .buttons .detailButton:hover {
+  opacity: 0.9;
+}
+
+.story {
+  background-color: #0866ff;
+  color: white;
+}
+
+.profileNavigation {
+  width: 60%;
+}
+
+.profileNavigationElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+.profileNavigationElements .navElement {
+  color: rgb(20, 54, 105);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.profileNavigationElements .navElement:hover {
+  background-color: rgb(153, 156, 189);
+  border-radius: 0.5rem;
+}
+
+.feed {
+  width: 100%;
+  height: 150rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 54, 105);
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 99%;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  padding: 0;
+}
+
+.left {
+  width: 45%;
+  height: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.right {
+  width: 55%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.intro {
+  /* background-color: rgb(20, 54, 105); */
+  background-color: rgba(6, 17, 50, 0.6);
+  box-shadow: 0 1px 3px #bebebe;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.intro h3 {
+  font-family: monospace;
+  letter-spacing: 0.3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgb(198, 198, 198);
+}
+
+.intro .editButton {
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.intro .editButton:hover {
+  opacity: 0.9;
+}
+
+.intro .detailsListElement {
+  font-size: 1.1rem;
+  padding: 0.5rem;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: rgba(6, 17, 50, 0.6);
+  box-shadow: 0 1px 3px #bebebe;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.photosHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.photosHeader h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.photosHeader h2:hover {
+  text-decoration: underline;
+}
+
+.photosHeader h3 {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 200;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.photosBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.photosLine1,
+.photosLine2,
+.photosLine3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  gap: 0.5rem;
+}
+
+.photoImg {
+  width: 32%;
+  height: 100%;
+}
+
+.first {
+  border-top-left-radius: 0.5rem;
+}
+
+.third {
+  border-top-right-radius: 0.5rem;
+}
+
+.seventh {
+  border-bottom-left-radius: 0.5rem;
+}
+
+.ninth {
+  border-bottom-right-radius: 0.5rem;
+}
+
+.post {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(6, 17, 50, 0.6);
+  box-shadow: 0 1px 3px #bebebe;
+  border-radius: 0.5rem;
+}
+
+.postHeader .profileImage {
+  width: 3.5rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.postHeader {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.postHeader input {
+  height: 2rem;
+  width: 85%;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.post .postButtons {
+  width: 100%;
+}
+
+.post .postList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 1rem;
+}
+
+.post .postButton {
+  padding: 0.5rem;
+}
+
+.post .postButton:hover {
+  cursor: pointer;
+  background-color: rgb(168, 168, 168);
+  border-radius: 0.5rem;
+}
+
+.post .postList .postIcon {
+  font-size: 1.5rem;
+}

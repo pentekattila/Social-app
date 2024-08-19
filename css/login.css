@@ -1,0 +1,93 @@
+body {
+  background-image: url(../Assets/Dog.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.formContainer {
+  margin: 5rem auto;
+  width: 95%;
+  max-width: 30rem;
+  border-radius: 0.5rem;
+  background-color: rgb(21, 21, 65, 0.5);
+  color: rgb(179, 156, 23);
+  box-shadow: 0 1px 4px #888;
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formField input {
+  background-color: rgb(82, 113, 146);
+  color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.formField input::placeholder {
+  color: white;
+}
+
+.formField.rememberUserField input {
+  width: 10%;
+}
+
+.formField.rememberUserField label {
+  text-align: left;
+  cursor: pointer;
+}
+
+.loginButton {
+  background-color: rgb(82, 113, 146);
+  border: 1px solid white;
+  padding: 0.5rem 2.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.loginButton:hover {
+  background-color: rgb(49, 75, 103);
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+
+a strong {
+  color: yellow;
+}
+
+.registerButton {
+  background-color: rgb(82, 113, 146);
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 2.5rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  width: 75%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  border: 2px solid white;
+  font-weight: bold;
+  background-color: rgb(49, 75, 103);
+}
+
+.formContainer a {
+  color: rgb(179, 156, 23);
+}
