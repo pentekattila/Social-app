@@ -7,7 +7,7 @@ body {
 }
 
 header {
-  background: gray url(../Assets/Dogs.webp);
+  background: gray url(../assets/Dogs.webp);
   background-size: cover;
   height: 35rem;
   color: white;
