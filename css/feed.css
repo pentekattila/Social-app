@@ -100,13 +100,12 @@ header .mainNavigation .navigation > li > a {
 main {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .leftContent,
 .rightContent {
   width: 20%;
-  border: 3px solid black;
   overflow: auto;
   height: calc(100vh - 5rem);
   position: fixed;
@@ -150,6 +149,7 @@ main {
 
 .profileImage {
   width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   padding: 0.2rem;
 }
@@ -219,7 +219,7 @@ main {
 }
 
 .post .reacts .reactsIcon {
-  color: blue;
+  color: rgb(20, 54, 105);
 }
 
 .post .reactsActions .actions {
@@ -231,12 +231,12 @@ main {
 .post .reactsActions .actions .reaction {
   cursor: pointer;
   padding: 0.5rem 1rem;
-  color: royalblue;
+  color: rgb(20, 54, 105);
   border-radius: 1rem;
 }
 
 .post .reactsActions .actions .reaction:hover {
-  color: teal;
+  color: rgb(20, 54, 105);
   background-color: lightblue;
 }
 
@@ -250,30 +250,30 @@ main {
 
 .post .commentSection .newCommentField {
   width: 75%;
-  border-radius: 0.25rem;
-  background-color: rgb(146, 146, 188);
+  border-radius: 1rem;
+  background-color: rgb(212, 212, 212);
   padding: 0.5rem;
 }
 
 .post .commentSection .newCommentField::placeholder {
-  color: royalblue;
+  color: rgb(20, 54, 105);
 }
 
 .post .commentSection .newCommentField:hover {
-  background-color: aliceblue;
+  background-color: rgb(255, 255, 255);
   width: 80%;
 }
 
 .post .commentSection .newCommentField:focus {
-  border: 3px solid royalblue;
+  border: 2px solid rgb(20, 54, 105);
 }
 
 .post .commentSection .insertCommentButton {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 1.2rem;
-  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  padding: 0.3rem 0.4rem;
 }
 
 /* .post .commentSection .insertCommentButton:hover {
@@ -314,8 +314,8 @@ main {
 .post .commentSection .insertCommentButton::before {
   content: "";
   border-radius: 50%;
-  min-width: calc(75px + 12px);
-  min-height: calc(60px + 12px);
+  min-width: calc(60px + 12px);
+  min-height: calc(50px + 12px);
   border: 6px solid #00ffcb;
   box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
   position: absolute;
@@ -339,8 +339,8 @@ main {
 
 .post .commentSection .insertCommentButton::after {
   content: "";
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 100%;
   border: 6px solid #00ffcb;
   position: absolute;
@@ -359,8 +359,8 @@ main {
 
 @keyframes ring {
   0% {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     opacity: 1;
   }
   100% {
@@ -413,6 +413,98 @@ main {
 .userComments .commentContent .commentReaction .commentReactionButton:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+/* .leftContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+} */
+
+.leftList {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  height: 100%;
+  gap: 2rem;
+  margin-left: 1rem;
+}
+
+.leftListElement {
+  color: rgb(20, 54, 105);
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.leftListElement:hover {
+  background-color: #c9c9c9;
+  border-radius: 1rem;
+}
+
+.leftListElement i {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+.rightContentHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.rightContentHeader h2 {
+  color: rgb(35, 70, 122);
+}
+
+.rightContentHeader .contentButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: rgb(35, 70, 122);
+}
+
+.rightContentHeader .contentButtons i:hover {
+  opacity: 0.9;
+  font-size: 1.5rem;
+}
+
+.rightContentList {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+}
+
+.rightContentListElement {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.rightContentListElement:hover {
+  background-color: #c9c9c9;
+  border-radius: 1rem;
+}
+
+.listImageWrapper span {
+  position: absolute;
+  bottom: 0.3rem;
+  left: 2rem;
+  font-size: 0.6rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: rgb(83, 168, 83);
 }
 
 @keyframes comment-animation {
