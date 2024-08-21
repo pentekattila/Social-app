@@ -126,6 +126,62 @@ main {
   gap: 3rem;
 }
 
+.poster {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
+.posterHeader .profileImage {
+  width: 3.5rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+.posterHeader {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.posterHeader input {
+  height: 2rem;
+  width: 85%;
+  border-radius: 1rem;
+  border: 1px solid rgb(54, 66, 104);
+  padding: 0.5rem;
+}
+
+.poster .postButtons {
+  width: 100%;
+}
+
+.poster .postList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: rgb(54, 66, 104);
+  font-size: 1rem;
+}
+
+.poster .postButton {
+  padding: 0.5rem;
+}
+
+.poster .postButton:hover {
+  cursor: pointer;
+  background-color: rgb(168, 168, 168);
+  border-radius: 0.5rem;
+}
+
+.poster .postList .postIcon {
+  font-size: 1.5rem;
+}
+
 .mainContent .post {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
@@ -236,8 +292,9 @@ main {
 }
 
 .post .reactsActions .actions .reaction:hover {
-  color: rgb(20, 54, 105);
-  background-color: lightblue;
+  cursor: pointer;
+  background-color: rgb(168, 168, 168);
+  border-radius: 0.5rem;
 }
 
 .post .commentSection {
