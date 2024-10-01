@@ -75,12 +75,12 @@ ref.loginButton.addEventListener("click", function (event) {
       if (isLoginPage) {
         login(emailValue, passwordValue).then((data) => {
           console.log(data);
-          window.open("pages/index.html", "_self");
+          window.open("pages/feed.html", "_self");
         });
       } else {
         createAccount(emailValue, passwordValue).then((data) => {
           console.log(data);
-          window.open("login.html", "_self");
+          window.open("index.html", "_self");
         });
       }
     } else {

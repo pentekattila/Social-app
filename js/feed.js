@@ -13,7 +13,7 @@ accountSettingsButton.addEventListener("click", function () {
 });
 
 logoutButton.addEventListener("click", () => {
-  window.open("../login.html", "_self");
+  window.open("../index.html", "_self");
 });
 
 const noOfLikesElem = document.getElementById("likesNumber");
