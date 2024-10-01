@@ -17,8 +17,8 @@
     />
 
     <!-- Dupa importul librariilor externe ar trebui sa facem importul fisierelor de stilizare -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/feed.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/feed.css" />
   </head>
   <body>
     <header>
@@ -37,7 +37,7 @@
             <a href="index.html"><i class="bi bi-house-fill navIcons"></i></a>
           </li>
           <li>
-            <a href="profile.html"
+            <a href="./profile.html"
               ><i class="bi bi-person-fill navIcons"></i
             ></a>
           </li>
@@ -54,7 +54,7 @@
 
       <ul class="links">
         <li>
-          <a href="landingPage.html"
+          <a href="./landingPage.html"
             ><i class="bi bi-plus-circle-fill navIcons"></i
           ></a>
         </li>
@@ -65,8 +65,13 @@
           </a>
         </li>
         <li>
-          <a href="login.html"
-            ><i class="bi bi-gear-fill navIcons" title="Settings"></i></a>
+          <div class="accountSettings">
+            <button id="accountSettingsButton"><i class="bi bi-gear-fill navIcons" title="Settings"></i></button>
+            <div class="accountSettingsMenu">
+              <button><i class="bi bi-gear-wide-connected accountSettingsButton"></i> Profile settings</button>
+              <button id="logoutButton"><i class="bi bi-box-arrow-right accountSettingsButton"></i> Logout</button>
+            </div>
+          </div>
         </li>
       </ul>
     </header>
@@ -88,7 +93,7 @@
       <section class="mainContent">
         <div class="poster">
           <div class="posterHeader">
-            <img src="./assets/dogprofile.png" alt="" class="profileImage">
+            <img src="../assets/dogprofile.png" alt="" class="profileImage">
             <input
              type="text"
               class="postInput"
@@ -105,16 +110,12 @@
           </div>
         </div>
 
-
-
-
-
         <div class="post">
           <div class="postHeader">
             <div class="profileUserInfo">
               <a href=""
                 ><img
-                  src="./assets/dogprofile.png"
+                  src="../assets/dogprofile.png"
                   alt="user profile"
                   class="profileImage"
               /></a>
@@ -131,7 +132,7 @@
 
           <div class="content">
             <div class="imgWrapper">
-              <img src="./assets/post.jpeg" alt="dog post" class="imgContent" />
+              <img src="../assets/post.jpeg" alt="dog post" class="imgContent" />
               <i class="bi bi-info-circle infoIcon" title="Afla mai multe"></i>
             </div>
 
@@ -140,7 +141,7 @@
             <p class="postDescription">
               Young, playful, full blood Golden Retriever looking for a home. Six months old, with every vaccine, very energetic, and eager to learn.
             </p>
-            <a href="landingPage.html" class="readMoreButton"
+            <a href="../pages/landingPage.html" class="readMoreButton"
               ><strong>Read more</strong>acest text nu va fi vizibil</a
             >
           </div>
@@ -148,11 +149,11 @@
           <div class="reacts">
             <div class="likesInfo">
               <i class="bi bi-hand-thumbs-up reactsIcon"></i>
-              <span>10</span>
+              <span><span id="likesNumber"></span></span>
             </div>
 
             <div class="commentsInfo">
-              <span>15</span>
+              <span><span id="donationsNumber"></span></span>
               <i class="bi bi-piggy-bank-fill reactsIcon"></i>
             </div>
           </div>
@@ -161,15 +162,15 @@
 
           <div class="reactsActions">
             <ul class="actions">
-              <li class="reaction">
+              <li class="reaction" id="likeButton">
                 <i class="bi bi-hand-thumbs-up"></i>
                 <span>Like</span>
               </li>
-              <li class="reaction">
+              <li class="reaction" id="donateButton">
                 <i class="bi bi-piggy-bank-fill"></i>
                 <span>Donate</span>
               </li>
-              <li class="reaction">
+              <li class="reaction" id="adoptButton">
                 <i class="bi bi-house-heart-fill"></i>
                 <span>Adopt</span>
               </li>
@@ -181,78 +182,30 @@
           <div class="commentSection">
             <a href=""
               ><img
-                src="./assets/dogprofile.png"
+                src="../assets/dogprofile.png"
                 alt="user profile"
                 class="profileImage"
             /></a>
             <input
               type="text"
-              placeholder="Comment to start a conversation"
+              placeholder="Comment to start adoption"
               class="newCommentField"
+              id="commentInput"
             />
             <button class="insertCommentButton">
               <i class="bi bi-send"></i>
             </button>
           </div>
-
-          <!-- <div class="userComments">
-            <div class="commentContent">
-              <div class="profileUserComment">
-                <a href=""
-                  ><img
-                    src="./assets/dogprofile.png"
-                    alt="user profile"
-                    class="profileImage"
-                /></a>
-                <span>User name</span>
-              </div>
-
-              <div class="userCommentText">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                quasi cumque dolor quo quas blanditiis repellat iste corrupti
-                aut delectus, nam voluptas sapiente numquam in.
-                <div class="emojiReaction">❤️</div>
-              </div>
-
-              <div class="commentReaction">
-                <strong class="commentReactionButton">Like</strong>
-                <strong class="commentReactionButton">Dislike</strong>
-                <strong class="commentReactionButton">Comment</strong>
-              </div>
-            </div>
-            <div class="commentContent">
-              <div class="profileUserComment">
-                <a href=""
-                  ><img
-                    src="./assets/dogprofile.png"
-                    alt="user profile"
-                    class="profileImage"
-                /></a>
-                <span>User name</span>
-              </div>
-
-              <div class="userCommentText">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
-                quasi cumque dolor quo quas blanditiis repellat iste corrupti
-                aut delectus, nam voluptas sapiente numquam in.
-                <div class="emojiReaction">❤️</div>
-              </div>
-
-              <div class="commentReaction">
-                <strong class="commentReactionButton">Like</strong>
-                <strong class="commentReactionButton">Dislike</strong>
-                <strong class="commentReactionButton">Comment</strong>
-              </div>
-            </div>
-          </div> -->
         </div>
+
+
 
         <div class="post">
           <div class="postHeader">
             <div class="profileUserInfo">
               <a href=""
                 ><img
-                  src="./assets/dogprofile.png"
+                  src="../assets/dogprofile.png"
                   alt="user profile"
                   class="profileImage"
               /></a>
@@ -269,7 +222,7 @@
 
           <div class="content">
             <div class="imgWrapper">
-              <img src="./assets/post.jpeg" alt="dog post" class="imgContent" />
+              <img src="../assets/post.jpeg" alt="dog post" class="imgContent" />
               <i class="bi bi-info-circle infoIcon" title="Afla mai multe"></i>
             </div>
 
@@ -278,7 +231,7 @@
             <p class="postDescription">
               Young, playful, full blood Golden Retriever looking for a home. Six months old, with every vaccine, very energetic, and eager to learn.
             </p>
-            <a href="landingPage.html" class="readMoreButton"
+            <a href="../pages/landingPage.html" class="readMoreButton"
               ><strong>Read more</strong>acest text nu va fi vizibil</a
             >
           </div>
@@ -300,7 +253,7 @@
           <div class="reactsActions">
             <ul class="actions">
               <li class="reaction">
-                <i class="bi bi-hand-thumbs-up"></i>
+                <i class="bi bi-hand-thumbs-up" onclick="changeBlue()"></i>
                 <span>Like</span>
               </li>
               <li class="reaction">
@@ -319,7 +272,7 @@
           <div class="commentSection">
             <a href=""
               ><img
-                src="./assets/dogprofile.png"
+                src="../assets/dogprofile.png"
                 alt="user profile"
                 class="profileImage"
             /></a>
@@ -397,105 +350,105 @@
         <ul class="rightContentList">
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Beagle Eagle</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Ben Golden</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Ernie Bernie</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Cocker Tucker</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Suzan Puddle</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Husky Chucky</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Boxer Foxer</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Tyler Rotweiler</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Raja Chihuaua</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Corgi Morgi</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Labrador Chad</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Poodle Doodle</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Beagle Eagle</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Beagle Eagle</strong></p>
           </li>
           <li class="rightContentListElement">
             <div class="listImageWrapper">
-              <img src="./assets/dogprofile.png" alt="" class="profileImage">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage">
               <span><i class="bi bi-circle-fill"></i></span>
             </div>
             <p><strong>Beagle Eagle</strong></p>
@@ -503,5 +456,6 @@
         </ul>
       </aside>
     </main>
+    <script src="../js/index.js"></script>
   </body>
 </html>

@@ -66,6 +66,49 @@ header .mainNavigation .navigation > li > a {
   display: flex;
 }
 
+.accountSettings {
+  position: relative;
+}
+
+.accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  position: absolute;
+  top: 2.5rem;
+  right: 0.7rem;
+  width: 15rem;
+  background-color: rgb(44, 71, 111);
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.accountSettingsMenu button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  color: rgb(179, 156, 23);
+  font-size: 1rem;
+}
+
+.accountSettingsMenu button:hover {
+  color: rgb(226, 194, 14);
+  font-weight: bold;
+}
+
+.accountSettingsButton {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
+
 .navIcons {
   font-size: 1.7rem;
   color: rgb(179, 156, 23);
@@ -133,8 +176,10 @@ main {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 0.7rem;
 }
 
 .posterHeader .profileImage {
@@ -183,8 +228,10 @@ main {
 }
 
 .mainContent .post {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 0.7rem;
 }
 
 .mainContent .post .postHeader {
@@ -276,6 +323,8 @@ main {
 
 .post .reacts .reactsIcon {
   color: rgb(20, 54, 105);
+  font-size: 1.3rem;
+  padding: 0.2rem;
 }
 
 .post .reactsActions .actions {
@@ -289,6 +338,10 @@ main {
   padding: 0.5rem 1rem;
   color: rgb(20, 54, 105);
   border-radius: 1rem;
+}
+
+.post .reactsActions .actions .reaction.touched {
+  color: rgb(3, 32, 76);
 }
 
 .post .reactsActions .actions .reaction:hover {
