@@ -73,6 +73,112 @@ header .mainNavigation .navigation > li > a {
   margin: 0 0.35rem;
   display: flex;
 }
+header .links {
+  justify-content: center;
+  align-items: center;
+}
+
+.dropButton:hover,
+.dropButton:focus {
+  color: rgb(226, 194, 14);
+  cursor: pointer;
+}
+
+.dropDown {
+  background-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.dropDownList {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: -2.75rem;
+  top: 2.5rem;
+  background-color: rgb(44, 71, 111);
+  border-radius: 0.7rem;
+  width: 21rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  padding: 0.5rem 0.5rem;
+  z-index: 1;
+  overflow: auto;
+}
+
+.dropElement {
+  display: flex;
+  margin: 0.2rem;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: 1px solid rgb(226, 194, 14);
+  border-radius: 2rem;
+}
+
+.dropElement:hover {
+  color: rgb(226, 194, 14);
+  font-weight: bold;
+  border: 1px solid rgb(179, 156, 23);
+}
+
+.dropDownList a:hover {
+  color: rgb(226, 194, 14);
+}
+
+.dropDownList a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(179, 156, 23);
+}
+
+.show {
+  display: block;
+}
+
+.accountSettings {
+  position: relative;
+}
+
+.accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  position: absolute;
+  top: 2.5rem;
+  right: 0.7rem;
+  width: 15rem;
+  background-color: rgb(44, 71, 111);
+  border-radius: 0.7rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.accountSettingsMenu button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  color: rgb(179, 156, 23);
+  font-size: 1rem;
+}
+
+.accountSettingsMenu button:hover {
+  color: rgb(226, 194, 14);
+  font-weight: bold;
+}
+
+.accountSettingsButton {
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
 
 .navIcons {
   font-size: 1.7rem;
@@ -84,15 +190,20 @@ header .mainNavigation .navigation > li > a {
   color: rgb(245, 215, 47);
 }
 
-.bellIcon {
+.dropButton {
+  background-color: transparent;
+  border: none;
+}
+
+.dropButton .bellIcon {
   position: relative;
   display: block;
 }
 
-.bellIcon span {
-  width: 1.2rem;
-  height: 1.2rem;
-  background-color: red;
+.dropDown span {
+  width: 1rem;
+  height: 1rem;
+  background-color: rgb(202, 0, 0);
   color: white;
   font-weight: bold;
   border-radius: 50%;
@@ -101,8 +212,12 @@ header .mainNavigation .navigation > li > a {
   align-items: center;
   position: absolute;
   top: 0;
-  right: 0;
-  font-size: 0.9rem;
+  right: 0.6rem;
+  font-size: 0.7rem;
+}
+
+.dropDown span:hover {
+  background-color: red;
 }
 
 .profile {

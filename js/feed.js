@@ -62,3 +62,60 @@ const commentInput = document.getElementById("commentInput");
 adoptButton.addEventListener("click", function () {
   commentInput.focus();
 });
+
+function dropDown() {
+  document.getElementById("dropDownMenu").classList.toggle("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".bellIcon")) {
+    let dropDowns = document.getElementsByClassName("dropDownList");
+    let i;
+    for (i = 0; i < dropDowns.length; i++) {
+      let openDropDown = dropDowns[i];
+      if (openDropDown.classList.contains("show")) {
+        openDropDown.classList.remove("show");
+      }
+    }
+  }
+};
+
+const noOfLikesElemOne = document.getElementById("likesNumberOne");
+const noOfDonationsElemOne = document.getElementById("donationsNumberOne");
+
+function getNumberOfLikesOne() {
+  noOfLikesElemOne.innerText = noOfLikesElemOne.innerText || 5;
+}
+
+function getNumberOfDonationsOne() {
+  noOfDonationsElemOne.innerText = noOfDonationsElemOne.innerText || 3;
+}
+
+function getDataOne() {
+  getNumberOfLikesOne();
+  getNumberOfDonationsOne();
+}
+
+getDataOne();
+
+const likeButtonOne = document.getElementById("likeButtonOne");
+const donationsButtonOne = document.getElementById("donateButtonOne");
+
+let isLikedOne = false;
+let isDonatedOne = false;
+
+likeButtonOne.addEventListener("click", function () {
+  isLikedOne = !isLikedOne;
+
+  noOfLikesElemOne.innerText = isLikedOne
+    ? Number(noOfLikesElemOne.innerText) + 1
+    : Number(noOfLikesElemOne.innerText) - 1;
+
+  this.classList.toggle("touched");
+});
+
+donationsButtonOne.addEventListener("click", function () {
+  noOfDonationsElemOne.innerText = Number(noOfDonationsElemOne.innerText) + 1;
+
+  this.classList.add("touched");
+});
