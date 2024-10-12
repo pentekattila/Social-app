@@ -824,7 +824,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: end;
-  justify-content: start;
+  justify-content: end;
   padding: 0.5rem;
   overflow: auto;
   gap: 0.15rem;
@@ -833,6 +833,8 @@ main {
     background-color: white;
     border-radius: 0.5rem;
     display: flex;
+    justify-content: end;
+    align-items: end;
   }
 
   .messageText p {
