@@ -92,9 +92,7 @@ header .links {
   background-color: rgb(44, 71, 111);
   border-radius: 0.7rem;
   width: 21rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   padding: 0.5rem 0.5rem;
   z-index: 1;
   overflow: auto;
@@ -151,9 +149,7 @@ header .links {
   width: 15rem;
   background-color: rgb(44, 71, 111);
   border-radius: 0.7rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
 }
 
 .accountSettingsMenu button {
@@ -251,9 +247,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   border-radius: 0.7rem;
 }
 
@@ -312,9 +306,7 @@ main {
 }
 
 .mainContent .post {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
   border-radius: 0.7rem;
 }
 
@@ -507,11 +499,7 @@ main {
   font-weight: 700;
   color: #313133;
   background: #4fd1c5;
-  background: linear-gradient(
-    90deg,
-    rgb(129, 230, 217) 0%,
-    rgb(79, 209, 197) 100%
-  );
+  background: linear-gradient(90deg, rgb(129, 230, 217) 0%, rgb(79, 209, 197) 100%);
   border: none;
   border-radius: 50%;
   box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
@@ -823,7 +811,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: end;
-  justify-content: end;
+  justify-content: start;
   padding: 0.5rem;
   overflow: auto;
   gap: 0.15rem;
@@ -874,4 +862,4 @@ main {
   to {
     left: 0rem;
   }
-}# sourceMappingURL=feed.css.map */ /*# sourceMappingURL=feed.css.map */
+}# sourceMappingURL=feed.css.map *//*# sourceMappingURL=feed.css.map */

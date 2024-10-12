@@ -47,6 +47,8 @@ function toggleClass() {
       button.hasEventListener = true;
     }
   });
+
+  document.getElementById("messageBody").innerHTML = "";
 }
 
 function closeMessage() {
