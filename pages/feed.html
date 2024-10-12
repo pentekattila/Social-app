@@ -18,7 +18,7 @@
 
     <!-- Dupa importul librariilor externe ar trebui sa facem importul fisierelor de stilizare -->
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/feed.css" />
+    <link rel="stylesheet" href="../scss/feed.css" />
   </head>
   <body>
     <header>
@@ -64,10 +64,12 @@
               </button>
               <span>4</span>
             <div id="dropDownMenu" class="dropDownList">
-              <div class="dropElement"><a href="#post">Beagle Eagle liked your post </a> 👍🏼</div>
-              <div class="dropElement"><a href="">Ben Golden donated for your cause </a>🪙</div>
-              <div class="dropElement"><a href="">Earnie Bernie donated for your cause </a>🪙</div>
-              <div class="dropElement"><a href="#postOne">Raja Chihuaua started an adoption </a>🏠</div>
+              <a href="#post" class="dropElement"><div>Beagle Eagle liked your post </div><div>👍🏼</div>
+              </a>
+              <a href="" class="dropElement"><div>Ben Golden donated for your cause </div><div>🪙</div></a>
+              <a href="" class="dropElement"><div>Earnie Bernie donated for your cause </div><div>🪙</div></a>
+              <a href="#postOne" class="dropElement"><div>Raja Chihuaua started an adoption </div><div>🏠</div></a>
+              
             </div>
           </div>
         </li>
@@ -140,7 +142,11 @@
           <div class="content">
             <div class="imgWrapper">
               <img src="../assets/post.jpeg" alt="dog post" class="imgContent" />
-              <i class="bi bi-info-circle infoIcon" title="Afla mai multe"></i>
+              <div class="infoIconWrapper">
+                <i class="bi bi-info-circle infoIcon" title="Afla mai multe"></i>
+              <p class="infoMessage">For further information on adopting, please contact our Dog refugee office, or contact us at savedogies@dogref.com. We encourage responsible adoption, therefore we may examine every case in detail, because we don't won't to have this sweet puppies back...</p>
+              </div>
+              
             </div>
 
             <strong class="postTitle">Goldie looking for a home</strong>
@@ -187,7 +193,7 @@
           <hr />
 
           <div class="commentSection">
-            <a href=""
+            <a href="./profile.html"
               ><img
                 src="../assets/dogprofile.png"
                 alt="user profile"
@@ -202,6 +208,64 @@
             <button class="insertCommentButton">
               <i class="bi bi-send"></i>
             </button>
+          </div>
+
+          <div class="userComments">
+            <div class="newCommentPlaceholder"></div>
+            <div class="commentContent">
+              <div class="profileUserComment">
+                <a href=""
+                  ><img
+                    src="../assets/dogprofile.png"
+                    alt="user profile"
+                    class="profileImage"
+                /></a>
+                <span>User name</span>
+              </div>
+
+              <div class="userCommentText">
+                <span id="commentMessage"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Neque, sapiente hic magnam aliquid quo suscipit sit ea
+                  mollitia expedita nisi obcaecati voluptatibus corrupti modi
+                  minus!</span
+                >
+                <div class="emojiReaction">🥳</div>
+                <strong class="removeCommentButton">Remove this comment</strong>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Dislike</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
+
+            <div class="commentContent">
+              <div class="profileUserComment">
+                <a href=""
+                  ><img
+                    src="../assets/dogprofile.png"
+                    alt="user profile"
+                    class="profileImage"
+                /></a>
+                <span>User name</span>
+              </div>
+
+              <div class="userCommentText">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+                sapiente hic magnam aliquid quo suscipit sit ea mollitia
+                expedita nisi obcaecati voluptatibus corrupti modi minus!
+                <div class="emojiReaction">🥳</div>
+                <strong class="removeCommentButton">Remove this comment</strong>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Dislike</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -291,10 +355,7 @@
               <i class="bi bi-send"></i>
             </button>
           </div>
-        </div>
-
-
-        
+        </div>    
       </section>
 
       <aside class="rightContent">
@@ -305,114 +366,135 @@
             <i class="bi bi-three-dots"></i>
           </div>
         </div>
-        <ul class="rightContentList">
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Beagle Eagle</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Ben Golden</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Ernie Bernie</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Cocker Tucker</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Suzan Puddle</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Husky Chucky</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Boxer Foxer</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Tyler Rotweiler</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/chihuauaProfile.jpeg" alt="" class="profileImageOne">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Raja Chihuaua</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Corgi Morgi</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Labrador Chad</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Poodle Doodle</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Beagle Eagle</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Beagle Eagle</strong></p>
-          </li>
-          <li class="rightContentListElement">
-            <div class="listImageWrapper">
-              <img src="../assets/dogprofile.png" alt="" class="profileImage">
-              <span><i class="bi bi-circle-fill"></i></span>
-            </div>
-            <p><strong>Beagle Eagle</strong></p>
-          </li>
-        </ul>
+          <ul class="rightContentList">
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/beaglehead.jpg" alt="" class="profileImage contactPicture">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Beagle Eagle</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/dogprofile.png" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Ben Golden</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/bernie.jpg" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Ernie Bernie</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/cocker.jpg" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Cocker Tucker</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/Poodle.webp" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Suzan Puddle</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/husky.jpg" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Husky Chucky</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/boxer.jpeg" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Boxer Foxer</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                <img src="../assets/Rottweiler.png" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Tyler Rotweiler</strong></p></button>
+            </li>
+            <li class="rightContentListElement">
+              <button class="contactButton" onclick="toggleClass()">
+                <div class="listImageWrapper">
+                  <img src="../assets/chihuauaProfile.jpeg" alt="" class="profileImage">
+                  <span><i class="bi bi-circle-fill"></i></span>
+                </div>
+                <p class="users"><strong>Raja Chihuaua</strong></p>
+              </button>
+            </li>
+            <li class="rightContentListElement">
+              <div class="listImageWrapper">
+                <img src="../assets/corgi.webp" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Corgi Morgi</strong></p>
+            </li>
+            <li class="rightContentListElement">
+              <div class="listImageWrapper">
+                <img src="../assets/labrador.webp" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Labrador Chad</strong></p>
+            </li>
+            <li class="rightContentListElement">
+              <div class="listImageWrapper">
+                <img src="../assets/poodle.jpg" alt="" class="profileImage">
+                <span><i class="bi bi-circle-fill"></i></span>
+              </div>
+              <p class="users"><strong>Poodle Doodle</strong></p>
+            </li>
+          </ul>
       </aside>
+      <div class="message" id="message">
+        <div class="messageHeader">
+          <div class="right">
+            <div class="messageImageWrapper">
+              <img src="../assets/dogprofile.png" alt="" class="profileImage" id="contactImage">
+              <span><i class="bi bi-circle-fill messageCircle"></i></span>
+            </div>
+            <div class="messageTitles">
+              <h3 id="contactName"></h3>
+              <p>Active now</p>
+            </div>
+          </div>
+          <div class="left"><span class="closeButton" onclick="closeMessage()"><i class="bi bi-x-lg"></i></span></div>
+          
+
+        </div>
+        <div class="messageBody">
+          <!-- <div class="messageText"><p class="messageText"></p></div> -->
+          
+        </div>
+        <div class="messageFooter">
+          <input
+              type="text"
+              placeholder="Aa"
+              class="newMessage"
+              id="messageInput"
+            />
+            <button class="insertMessageButton">
+              <i class="bi bi-send"></i>
+            </button>
+        </div>
+      </div>    
     </main>
     <script src="../js/feed.js"></script>
   </body>

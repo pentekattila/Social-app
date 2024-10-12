@@ -16,6 +16,45 @@ logoutButton.addEventListener("click", () => {
   window.open("../index.html", "_self");
 });
 
+function toggleClass() {
+  const messageElement = document.getElementById("message");
+
+  const contactNameElement = document.getElementById("contactName");
+  const contactImageElement = document.getElementById("contactImage");
+
+  const contactButtons = Array.from(
+    document.getElementsByClassName("contactButton")
+  );
+
+  if (messageElement.style.display === "block") {
+    messageElement.style.display = "none";
+  } else {
+    messageElement.style.display = "block";
+  }
+
+  contactButtons.forEach((button) => {
+    if (!button.hasEventListener) {
+      button.addEventListener("click", function () {
+        const userName = button.querySelector(".users").innerText;
+        const profileImageSrc = button.querySelector(".profileImage").src;
+
+        contactNameElement.innerText = userName;
+        contactImageElement.src = profileImageSrc;
+
+        messageElement.style.display = "block";
+      });
+
+      button.hasEventListener = true;
+    }
+  });
+}
+
+function closeMessage() {
+  if (document.getElementById("message").style.display === "block") {
+    document.getElementById("message").style.display = "none";
+  }
+}
+
 const noOfLikesElem = document.getElementById("likesNumber");
 const noOfDonationsElem = document.getElementById("donationsNumber");
 
@@ -56,11 +95,151 @@ donationsButton.addEventListener("click", function () {
   this.classList.add("touched");
 });
 
+const messageInput = document.getElementById("messageInput");
+const messageText = document.getElementsByClassName("messageText")[0];
+const messageBody = document.getElementsByClassName("messageBody")[0];
+
+// messageText.innerText =
+//   localStorage.getItem("message") || messageText.innerText;
+
+function newMessage() {
+  const newMessage = document.createElement("div");
+  const newMessageContent = `
+  <div class="messageText">
+    <p class="messageText">${messageInput.value}</p>
+  </div>`;
+  newMessage.innerHTML = newMessageContent;
+  messageBody.insertAdjacentElement("beforeend", newMessage);
+  localStorage.setItem("message", JSON.stringify(messageInput.value));
+  messageInput.value = "";
+}
+
+messageInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    newMessage();
+    this.blur();
+  }
+});
+
+const insertMessageButton = document.getElementsByClassName(
+  "insertMessageButton"
+)[0];
+
+insertMessageButton.addEventListener("click", newMessage);
+
 const adoptButton = document.getElementById("adoptButton");
 const commentInput = document.getElementById("commentInput");
+const commentMessage = document.getElementById("commentMessage");
+const userCommentList = document.getElementsByClassName("userComments")[0];
+
+commentMessage.innerText =
+  localStorage.getItem("comment") || commentMessage.innerText;
+
+let showComments = true;
 
 adoptButton.addEventListener("click", function () {
-  commentInput.focus();
+  if (showComments) {
+    userCommentList.style.display = "block";
+    commentInput.focus();
+  } else {
+    userCommentList.style.display = "none";
+  }
+
+  showComments = !showComments;
+});
+
+function setComment() {
+  const newComment = document.createElement("div");
+
+  const newCommentUsername = Date.now();
+
+  const newCommentMessageContent = `<div class="commentContent">
+              <div class="profileUserComment">
+                <a href=""
+                  ><img
+                    src="../assets/dogprofile.png"
+                    alt="user profile"
+                    class="profileImage"
+                /></a>
+                <span>${newCommentUsername}</span>
+              </div>
+
+              <div class="userCommentText">
+                <span id="commentMessage"
+                  >${commentInput.value}</span
+                >
+                <div class="emojiReaction">🥳</div>
+                <strong class="removeCommentButton">Remove this comment</strong>
+              </div>
+
+              <div class="commentReaction">
+                <strong class="commentReactionButton">Like</strong>
+                <strong class="commentReactionButton">Dislike</strong>
+                <strong class="commentReactionButton">Comment</strong>
+              </div>
+            </div>`;
+  newComment.innerHTML = newCommentMessageContent;
+  userCommentList.insertAdjacentElement("afterbegin", newComment);
+  localStorage.setItem("comment", JSON.stringify(commentInput.value));
+  commentInput.value = "";
+  addRemoveCommentListeners();
+}
+
+commentInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    setComment();
+    this.blur();
+  }
+});
+
+const commentInputButton = document.getElementsByClassName(
+  "insertCommentButton"
+)[0];
+
+commentInputButton.addEventListener("click", setComment);
+
+function addRemoveCommentListeners() {
+  const commentContentList = Array.from(
+    document.getElementsByClassName("commentContent")
+  );
+
+  const removeCommentButtons = Array.from(
+    document.getElementsByClassName("removeCommentButton")
+  );
+
+  commentContentList.forEach((commentContent, index) => {
+    commentContent.addEventListener("mouseover", function () {
+      removeCommentButtons[index].style.display = "inline-block";
+    });
+
+    commentContent.addEventListener("mouseout", function () {
+      removeCommentButtons[index].style.display = "none";
+    });
+  });
+
+  removeCommentButtons.forEach((removeCommentButton, index) => {
+    removeCommentButton.addEventListener("click", () => {
+      commentContentList[index].remove();
+    });
+  });
+}
+
+addRemoveCommentListeners();
+
+const infoIcon = document.getElementsByClassName("infoIcon")[0];
+const infoMessage = document.getElementsByClassName("infoMessage")[0];
+
+let infoIconDisplayTimeout;
+
+infoIcon.addEventListener("mouseover", function () {
+  infoIconDisplayTimeout = setTimeout(() => {
+    infoMessage.style.display = "block";
+  }, 1000);
+});
+
+infoIcon.addEventListener("mouseout", function () {
+  clearTimeout(infoIconDisplayTimeout);
+  infoMessage.style.display = "none";
 });
 
 function dropDown() {

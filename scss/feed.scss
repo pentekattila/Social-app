@@ -1,3 +1,7 @@
+$GlobalGold: rgb(226, 194, 14);
+$GlobalDarkGold: rgb(179, 156, 23);
+$GlobalDarkBlue: rgb(20, 54, 105);
+
 * {
   font-family: "Lato", system-ui;
 }
@@ -24,22 +28,18 @@ header {
   z-index: 10;
   background-color: rgb(20, 54, 105);
 }
-
 header .mainSearch {
   display: flex;
   align-items: center;
 }
-
 header .mainSearch .logo {
   padding: 1rem;
   font-size: 1.7rem;
   color: rgb(179, 156, 23);
 }
-
 header .mainSearch .logo:hover {
-  color: rgb(226, 194, 14);
+  color: $GlobalGold;
 }
-
 header .mainSearch .searchInput {
   height: 1.7rem;
   border-radius: 1.5rem;
@@ -73,7 +73,7 @@ header .links {
 
 .dropButton:hover,
 .dropButton:focus {
-  color: rgb(226, 194, 14);
+  color: $GlobalGold;
   cursor: pointer;
 }
 
@@ -106,18 +106,19 @@ header .links {
   justify-content: space-between;
   font-size: 1.2rem;
   padding: 0.5rem;
-  border: 1px solid rgb(226, 194, 14);
+  border: 1px solid $GlobalGold;
   border-radius: 2rem;
 }
 
 .dropElement:hover {
-  color: rgb(226, 194, 14);
+  color: $GlobalGold;
   font-weight: bold;
   border: 1px solid rgb(179, 156, 23);
+  cursor: pointer;
 }
 
 .dropDownList a:hover {
-  color: rgb(226, 194, 14);
+  color: $GlobalGold;
 }
 
 .dropDownList a {
@@ -164,7 +165,7 @@ header .links {
 }
 
 .accountSettingsMenu button:hover {
-  color: rgb(226, 194, 14);
+  color: $GlobalGold;
   font-weight: bold;
 }
 
@@ -217,6 +218,7 @@ main {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+  position: relative;
 }
 
 .leftContent,
@@ -259,6 +261,7 @@ main {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+  -o-object-fit: cover;
   object-fit: cover;
   padding: 0.2rem;
 }
@@ -330,7 +333,6 @@ main {
   width: 3rem;
   border-radius: 50%;
 } */
-
 .profileImage {
   width: 3rem;
   height: 3rem;
@@ -378,6 +380,21 @@ main {
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+.infoIconWrapper {
+  position: relative;
+}
+
+.infoMessage {
+  display: none;
+  position: absolute;
+  border: 1px solid rgb(20, 54, 105);
+  top: -0.5rem;
+  padding: 1rem;
+  background-color: rgb(54, 66, 104);
+  border-radius: 0.7rem;
+  color: rgb(226, 194, 14);
 }
 
 .content .postTitle {
@@ -446,6 +463,10 @@ main {
   padding: 0.5rem;
 }
 
+.post .commentSection .newCommentField::-moz-placeholder {
+  color: rgb(20, 54, 105);
+}
+
 .post .commentSection .newCommentField::placeholder {
   color: rgb(20, 54, 105);
 }
@@ -472,7 +493,6 @@ main {
   background-color: aliceblue;
   border-radius: 0.5rem;
 } */
-
 .post .commentSection .insertCommentButton {
   /* min-width: 75px;
   min-height: 60px; */
@@ -489,8 +509,8 @@ main {
   background: #4fd1c5;
   background: linear-gradient(
     90deg,
-    rgba(129, 230, 217, 1) 0%,
-    rgba(79, 209, 197, 1) 100%
+    rgb(129, 230, 217) 0%,
+    rgb(79, 209, 197) 100%
   );
   border: none;
   border-radius: 50%;
@@ -505,8 +525,8 @@ main {
 .post .commentSection .insertCommentButton::before {
   content: "";
   border-radius: 50%;
-  min-width: calc(60px + 12px);
-  min-height: calc(50px + 12px);
+  min-width: 72px;
+  min-height: 62px;
   border: 6px solid #00ffcb;
   box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
   position: absolute;
@@ -548,6 +568,11 @@ main {
   display: none;
 }
 
+.removeCommentButton {
+  display: none;
+  cursor: pointer;
+}
+
 @keyframes ring {
   0% {
     width: 25px;
@@ -560,7 +585,6 @@ main {
     opacity: 0;
   }
 }
-
 .userComments {
   display: flex;
   flex-direction: column;
@@ -581,6 +605,11 @@ main {
   background-color: aliceblue;
   border-radius: 1rem;
   position: relative;
+}
+
+.emojiReaction:hover {
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* .userComments .userCommentText:hover {
@@ -611,7 +640,6 @@ main {
   flex-direction: column;
   height: 100%;
 } */
-
 .leftList {
   display: flex;
   flex-direction: column;
@@ -693,16 +721,162 @@ main {
   bottom: 0.3rem;
   left: 2rem;
   font-size: 0.6rem;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   border-radius: 50%;
-  color: rgb(83, 168, 83);
+  color: rgb(48, 151, 48);
+  margin: 0;
 }
 
+.contactButton {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-self: start;
+  padding: 0;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#message {
+  display: none;
+  position: fixed;
+  width: 250px;
+  height: 330px;
+  background-color: rgb(44, 71, 111);
+  top: 27rem;
+  right: 12rem;
+  flex-direction: column;
+  z-index: 1;
+  overflow: auto;
+  border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.messageHeader {
+  width: 100%;
+  height: 15%;
+  background-color: rgb(44, 71, 111);
+  box-shadow: rgba(122, 128, 216, 0.45) 0px 25px 20px -20px;
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+}
+
+.left {
+  display: flex;
+  padding: 0.5rem;
+}
+
+.closeButton {
+  color: rgb(226, 194, 14);
+  font-size: 1.4rem;
+}
+
+.closeButton:hover {
+  cursor: pointer;
+  color: rgb(255, 220, 25);
+}
+
+.messageImageWrapper {
+  position: relative;
+}
+
+.bi.bi-circle-fill.messageCircle {
+  position: absolute;
+  color: green;
+  bottom: -0.2rem;
+  right: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.messageTitles {
+  color: white;
+  padding: 0.2rem;
+}
+
+.messageTitles h3,
+.messageTitles p {
+  margin: 0;
+}
+
+.messageTitles h3 {
+  color: rgb(226, 194, 14);
+  font-size: 1rem;
+}
+
+.messageTitles p {
+  font-size: 0.8rem;
+  color: rgb(179, 156, 23);
+}
+
+.messageBody {
+  width: 100%;
+  height: 70%;
+  background-color: rgb(44, 71, 111);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: start;
+  padding: 0.5rem;
+  overflow: auto;
+  gap: 0.15rem;
+
+  .messageText {
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+  }
+
+  .messageText p {
+    margin: 0;
+    padding: 0.2rem;
+    color: $GlobalDarkBlue;
+    text-align: end;
+  }
+}
+
+.messageFooter {
+  width: 100%;
+  height: 15%;
+  background-color: rgb(44, 71, 111);
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+
+  .newMessage {
+    height: 40%;
+    width: 70%;
+    border-radius: 3rem;
+    border: 1px solid $GlobalGold;
+  }
+
+  .insertMessageButton {
+    border-radius: 1rem;
+    border: 1px solid $GlobalGold;
+    height: 40%;
+    background-color: rgb(44, 71, 111);
+    color: $GlobalDarkGold;
+
+    &:hover {
+      color: $GlobalGold;
+      cursor: pointer;
+    }
+  }
+}
 /* @keyframes comment-animation {
   from {
     left: -2rem;
   }
   to {
     left: 0rem;
-  } */
-/* } */
+  }
+}# sourceMappingURL=feed.css.map */
