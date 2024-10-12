@@ -52,6 +52,7 @@ function toggleClass() {
 function closeMessage() {
   if (document.getElementById("message").style.display === "block") {
     document.getElementById("message").style.display = "none";
+    document.getElementsById("messageBody").innerHTML = "";
   }
 }
 
@@ -116,8 +117,10 @@ function newMessage() {
 
 messageInput.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-    newMessage();
-    this.blur();
+    if (messageInput.value !== "") {
+      newMessage();
+      this.blur();
+    }
   }
 });
 
@@ -125,7 +128,11 @@ const insertMessageButton = document.getElementsByClassName(
   "insertMessageButton"
 )[0];
 
-insertMessageButton.addEventListener("click", newMessage);
+insertMessageButton.addEventListener("click", () => {
+  if (messageInput.value !== "") {
+    newMessage();
+  }
+});
 
 const adoptButton = document.getElementById("adoptButton");
 const commentInput = document.getElementById("commentInput");
